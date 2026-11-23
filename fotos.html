@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Patrick &amp; Elli">
+<meta property="og:title" content="Foto-Challenge · Patrick &amp; Elli">
+<meta property="og:description" content="Haltet mit uns die schönsten Momente fest – ladet alle eure Fotos hoch, die Aufgaben sind nur eine Anregung.">
+<meta property="og:url" content="https://patrick-elli.de/fotos.html">
+<meta property="og:image" content="https://patrick-elli.de/vorschau.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Patrick und Elli – Wir heiraten am 26. Juni 2027">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://patrick-elli.de/vorschau.jpg">
+<meta name="description" content="Haltet mit uns die schönsten Momente fest – ladet alle eure Fotos hoch, die Aufgaben sind nur eine Anregung.">
+<link rel="icon" type="image/png" sizes="48x48" href="favicon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Foto-Challenge – Patrick & Elli</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5ecdb;--surface:#ebdfc6;--text:#3a2e22;--muted:#7a6a58;--accent:#96701f;--accent2:#c6a15f;--line:rgba(58,46,34,.15);--card:rgba(255,255,255,.72);--night:#2a2118;box-sizing:border-box}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1f1812;--surface:#2a2118;--text:#f5ecda;--muted:#b9a98f;--accent:#e0c58f;--accent2:#ecd8a8;--line:rgba(255,255,255,.13);--card:rgba(255,255,255,.06);--night:#221a12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1f1812;--surface:#2a2118;--text:#f5ecda;--muted:#b9a98f;--accent:#e0c58f;--accent2:#ecd8a8;--line:rgba(255,255,255,.13);--card:rgba(255,255,255,.06);--night:#221a12;color-scheme:dark}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Jost,system-ui,sans-serif;font-weight:300;line-height:1.7;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;margin:0}
+section{max-width:720px;margin:0 auto;padding:56px 24px;text-align:center}
+.alt{background:var(--surface);max-width:none}.alt>div{max-width:720px;margin:0 auto}
+.top{padding-top:calc(64px + env(safe-area-inset-top,0px))}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;color:var(--accent)}
+h1{font-size:clamp(2.6rem,10vw,4.4rem);line-height:1.08;margin:14px 0}
+h2{font-size:2.1rem;margin-bottom:8px}
+h2::after{content:"";display:block;width:48px;height:1px;background:var(--accent);margin:16px auto 28px}
+.muted{color:var(--muted)}
+.back{display:inline-block;margin-bottom:28px;color:var(--accent);text-decoration:none;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase}
+a.btn,button.btn{display:inline-block;margin-top:18px;padding:13px 28px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-decoration:none;font:400 .85rem Jost,sans-serif;letter-spacing:.15em;text-transform:uppercase;cursor:pointer}
+a.btn.ghost{background:none;color:var(--accent)}
+button.btn:disabled{opacity:.6;cursor:default}
+.tasks{list-style:none;margin:0;padding:0;text-align:left}
+.tasks li{border-bottom:1px solid var(--line)}
+.tasks label{display:flex;gap:16px;align-items:center;padding:15px 0;cursor:pointer}
+.tasks input{position:absolute;opacity:0;pointer-events:none}
+.tasks .n{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font:400 1.15rem "Cormorant Garamond",Georgia,serif;color:var(--accent);transition:background .3s,color .3s}
+.tasks input:focus-visible+.n{outline:2px solid var(--accent);outline-offset:3px}
+.tasks input:checked+.n{background:var(--accent);color:#fff}
+.tasks input:checked~.t{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--accent)}
+.prog{margin-top:22px;font-size:.9rem;letter-spacing:.08em;color:var(--accent)}
+.bar{height:3px;background:var(--line);margin:10px auto 0;max-width:260px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .5s ease}
+.card{border:1px solid var(--line);background:var(--bg);padding:24px;text-align:left}
+.card label{display:block;font-size:.85rem;letter-spacing:.06em;color:var(--muted)}
+.field{width:100%;padding:11px;margin:6px 0 16px;box-sizing:border-box;background:var(--bg);color:var(--text);border:1px solid var(--line);font:300 1rem Jost,system-ui,sans-serif}
+.card .btn{width:100%;text-align:center}
+#msg{margin-top:14px;min-height:1.6em;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:6px}
+.grid a{display:block;aspect-ratio:1;background:var(--line)}
+.grid img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar{display:block;width:104px;height:104px;border-radius:50%;object-fit:cover;margin:0 auto 22px;border:1px solid var(--accent);box-shadow:0 0 0 5px var(--bg),0 0 0 6px var(--line)}
+footer{text-align:center;padding:36px 24px;color:var(--muted);font-size:.9rem}
+
+a.btn,button.btn{border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,var(--accent),#96701f);box-shadow:0 8px 22px rgba(198,161,95,.28);transition:transform .25s ease,box-shadow .25s ease}
+a.btn:hover,button.btn:hover{transform:translateY(-2px)}
+a.btn.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent);box-shadow:none}
+.card{border-radius:18px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px rgba(58,46,34,.07)}
+.field{border-radius:10px}
+h2::after{height:2px;border-radius:2px;background:linear-gradient(90deg,var(--accent2),var(--accent))}
+.tasks input:checked+.n{background:linear-gradient(135deg,#ecd8a8,#c6a15f);color:#2a2118;border-color:#c6a15f}
+.avatar{box-shadow:0 0 0 3px var(--accent2),0 0 0 8px var(--bg),0 0 0 9px var(--line);border:none}
+footer{background:var(--night);color:rgba(255,255,255,.7)}
+</style>
+</head>
+<body>
+
+<section class="top">
+  <a class="back" href="index.html">← Zur Einladung</a>
+  <img class="avatar" src="rund.jpg" alt="Patrick und Elli" onerror="this.remove()">
+  <div class="eyebrow">Patrick &amp; Elli · 26.06.2027</div>
+  <h1>Foto-Challenge</h1>
+  <p class="muted">Ladet alle Fotos hoch, die ihr an diesem Tag macht, egal ob Gruppenbild, Tanzfläche, Deko oder ein spontaner Schnappschuss. Die Aufgaben sind nur eine kleine Anregung, ihr müsst sie nicht lösen. Jedes Foto zählt und schenkt uns Erinnerungen, die wir sonst nie gesehen hätten.</p>
+</section>
+
+<section class="alt"><div>
+  <h2>Eure Aufgaben</h2>
+  <p class="muted">Das sind nur Ideen für besondere Fotos, kein Muss. Wenn ihr eine Aufgabe geschafft habt, tippt sie an.</p>
+  <ul class="tasks" id="tasks"></ul>
+  <div class="prog" id="prog"></div>
+  <div class="bar"><i id="barfill"></i></div>
+</div></section>
+
+<section id="upload">
+  <h2>Fotos hochladen</h2>
+  <p class="muted">Hier könnt ihr alle eure Fotos hochladen, mit oder ohne Aufgabe. Sie landen direkt in unserem gemeinsamen Album.</p>
+  <form class="card" id="upform">
+    <label for="who">Euer Name (optional)</label>
+    <input class="field" id="who" autocomplete="given-name" maxlength="40">
+    <label for="task">Zu welcher Aufgabe gehört das Foto?</label>
+    <select class="field" id="task"></select>
+    <label for="files">Fotos auswählen oder aufnehmen</label>
+    <input class="field" id="files" type="file" accept="image/*" multiple>
+    <button class="btn" id="send" type="submit">Hochladen</button>
+  </form>
+  <a class="btn" id="uplink" href="#" target="_blank" rel="noopener" hidden>Fotos hochladen</a>
+  <div id="msg" class="muted" aria-live="polite"></div>
+</section>
+
+<section class="alt" id="album"><div>
+  <h2>Unser Album</h2>
+  <div class="grid" id="grid"></div>
+  <p class="muted" id="galmsg"></p>
+  <p class="muted" id="galnote" hidden>Das Album wird zur Hochzeit freigeschaltet.</p>
+  <a class="btn ghost" id="gallink" href="#" target="_blank" rel="noopener" hidden>Alle Fotos ansehen</a>
+</div></section>
+
+<footer>Patrick &amp; Elli · 26.06.2027<br>Danke, dass ihr dabei seid!</footer>
+
+<script>
+(function(){
+  // ---- Einstellungen ----
+  var CFG={
+    cloud:"",        // Cloudinary: Cloud Name (siehe Anleitung)
+    preset:"",       // Cloudinary: Name des "unsigned" Upload-Presets
+    tag:"hochzeit-patrick-elli",
+    uploadUrl:"https://my.hidrive.com/upl/Bze2Fjl5U",    // Alternative: Link zu Dropbox-/Drive-Upload
+    galleryUrl:"https://my.hidrive.com/share/45txd1ain3"    // Alternative: Link zum geteilten Album
+  };
+  var TASKS=[
+    "Ein Selfie mit dem Brautpaar",
+    "Euer Tisch als Gruppenbild",
+    "Das schönste Detail der Deko",
+    "Ein Prost mit euren Sektgläsern",
+    "Die Tanzfläche in Aktion",
+    "Ein Foto mit jemandem, den ihr heute neu kennengelernt habt",
+    "Ein Foto, das uns zum Lachen bringt"
+  ];
+
+  function $(id){return document.getElementById(id)}
+  var KEY="pe-challenge-v1",done={};
+  try{done=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){done={}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}}
+
+  var list=$("tasks"),sel=$("task");
+  var o0=document.createElement("option");o0.value="";o0.textContent="Freies Foto (keine Aufgabe)";sel.appendChild(o0);
+  TASKS.forEach(function(t,i){
+    var li=document.createElement("li"),lb=document.createElement("label"),cb=document.createElement("input"),n=document.createElement("span"),tx=document.createElement("span");
+    cb.type="checkbox";cb.checked=!!done[i];n.className="n";n.textContent=i+1;tx.className="t";tx.textContent=t;
+    cb.addEventListener("change",function(){if(cb.checked)done[i]=1;else delete done[i];save();progress()});
+    lb.appendChild(cb);lb.appendChild(n);lb.appendChild(tx);li.appendChild(lb);list.appendChild(li);
+    var op=document.createElement("option");op.value=String(i);op.textContent=(i+1)+". "+t;sel.appendChild(op);
+  });
+  function progress(){
+    var c=Object.keys(done).length;
+    $("prog").textContent=c+" von "+TASKS.length+" geschafft"+(c===TASKS.length?" – ihr seid großartig! 🎉":"");
+    $("barfill").style.width=(c/TASKS.length*100)+"%";
+  }
+  function tick(i){
+    if(i===""||isNaN(Number(i)))return;
+    done[i]=1;save();
+    var cbs=list.querySelectorAll("input");if(cbs[i])cbs[i].checked=true;progress();
+  }
+  progress();
+
+  var hasCloud=!!(CFG.cloud&&CFG.preset),msg=$("msg");
+  function clean(v){return String(v||"").replace(/[=|,]/g," ").trim().slice(0,40)}
+
+  function uploadOne(file,task,name){
+    var fd=new FormData();
+    fd.append("file",file);fd.append("upload_preset",CFG.preset);fd.append("tags",CFG.tag);
+    fd.append("context","aufgabe="+clean(task)+"|von="+clean(name));
+    return fetch("https://api.cloudinary.com/v1_1/"+CFG.cloud+"/image/upload",{method:"POST",body:fd}).then(function(r){
+      if(!r.ok)throw new Error("HTTP "+r.status);return r.json();
+    });
+  }
+
+  $("upform").addEventListener("submit",function(ev){
+    ev.preventDefault();
+    if(!hasCloud){msg.textContent="Der Foto-Upload wird zur Hochzeit freigeschaltet.";return}
+    var files=Array.prototype.slice.call($("files").files);
+    if(!files.length){msg.textContent="Bitte wählt zuerst ein Foto aus.";return}
+    var taskIdx=sel.value,taskName=taskIdx===""?"frei":TASKS[Number(taskIdx)],who=$("who").value,btn=$("send"),ok=0,fail=0;
+    btn.disabled=true;
+    (function next(k){
+      if(k>=files.length){
+        btn.disabled=false;$("files").value="";
+        if(ok){tick(taskIdx);loadGallery()}
+        msg.textContent=fail?(ok+" hochgeladen, "+fail+" fehlgeschlagen. Bitte versucht es noch einmal."):"Danke! "+(ok>1?ok+" Fotos sind":"Dein Foto ist")+" im Album. 💛";
+        return;
+      }
+      msg.textContent="Foto "+(k+1)+" von "+files.length+" wird hochgeladen …";
+      uploadOne(files[k],taskName,who).then(function(){ok++}).catch(function(){fail++}).then(function(){next(k+1)});
+    })(0);
+  });
+
+  function loadGallery(){
+    var box=$("grid");
+    fetch("https://res.cloudinary.com/"+CFG.cloud+"/image/list/"+CFG.tag+".json?t="+Date.now()).then(function(r){
+      if(!r.ok)throw new Error("list");return r.json();
+    }).then(function(j){
+      var rs=(j.resources||[]).sort(function(a,b){return a.created_at<b.created_at?1:-1});
+      box.innerHTML="";
+      $("galmsg").textContent=rs.length?"":"Noch keine Fotos – macht den Anfang!";
+      if(!rs.length)return;
+      var base="https://res.cloudinary.com/"+CFG.cloud+"/image/upload/";
+      rs.forEach(function(x){
+        var tail="v"+x.version+"/"+x.public_id+"."+x.format,a=document.createElement("a"),im=document.createElement("img");
+        a.href=base+"q_auto,f_auto,w_1600/"+tail;a.target="_blank";a.rel="noopener";
+        im.loading="lazy";im.alt="Foto von einem Gast";im.src=base+"c_fill,w_360,h_360,q_auto,f_auto/"+tail;
+        a.appendChild(im);box.appendChild(a);
+      });
+    }).catch(function(){$("galmsg").textContent="Das Album lässt sich gerade nicht laden."});
+  }
+
+  if(hasCloud){loadGallery()}
+  else{
+    $("grid").hidden=true;
+    if(CFG.uploadUrl){$("upform").hidden=true;$("uplink").href=CFG.uploadUrl;$("uplink").hidden=false}
+    if(CFG.galleryUrl){$("gallink").href=CFG.galleryUrl;$("gallink").hidden=false}else{$("galnote").hidden=false}
+  }
+})();
+</script>
+</body>
+</html>
